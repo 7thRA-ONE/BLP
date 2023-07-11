@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url('https://wallpapercave.com/dwp1x/wp2007987.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.form__group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #d2d2d2;
+  outline: 0;
+  font-size: 16px;
+  color: #000000;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown + .form__label {
+  font-size: 16px;
+  cursor: text;
+  top: 35px; /* Adjusted top position */
+}
+
+label,
+.form__field:focus + .form__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 14px;
+  color: #9b9b9b;
+}
+
+.form__field:focus + .form__label {
+  color: #009788;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  border-bottom: 2px solid #009788;
+}
+
+.tile {
+  width: 100%;
+  max-width: 400px;
+  flex: 1 1 auto;
+  margin: 10px;
+}
+
+.tile__figure {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tile__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tile__figure:hover .tile__image {
+  transform: scale(1.1);
+}
+
+canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
